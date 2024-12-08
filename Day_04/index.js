@@ -31,7 +31,6 @@ Stretch Goals
 
 import { films } from "./data.js";
 
-// Some useful elements
 const guessInputForm = document.getElementById("guess-input");
 const guessInput = guessInputForm.querySelector("input");
 const messageContainer =
