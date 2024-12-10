@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #2b2d42;
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.snow-globe {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: unset;
+  overflow: hidden;
+  background-image: url("images/scene.png");
+  background-color: black;
+  background-size: contain;
+  box-shadow: inset 25px 25px 40px rgba(255, 255, 255, 0.5);
+  border: 2px solid #999;
+}
+
+.snow-globe-base {
+  width: 380px;
+  height: 60px;
+  background: rgb(157, 161, 159);
+  background: linear-gradient(
+    90deg,
+    rgba(157, 161, 159, 1) 27%,
+    rgba(247, 254, 251, 1) 69%
+  );
+}
+
+/* 
+Challenge:
+2.  Add CSS to position the snowflakes ❄️ and animation to make them fall.
+*/
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  user-select: none;
+  pointer-events: none;
+  animation: fall linear infinite;
+  z-index: 4;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
